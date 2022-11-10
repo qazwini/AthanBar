@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var viewModel: AthanViewModel
+    
     var body: some View {
         TabView {
             PreferencesView()

@@ -7,18 +7,31 @@
 
 import SwiftUI
 
+struct OutlineButtonBackground: View {
+    let isPressed: Bool
+    
+    var body: some View {
+        if isPressed {
+            RoundedRectangle(
+                cornerRadius: 8,
+                style: .continuous
+            ).fill(Color.secondary.opacity(0.5))
+        } else {
+            RoundedRectangle(
+                cornerRadius: 8,
+                style: .continuous
+            ).stroke(Color.secondary.opacity(0.5))
+        }
+    }
+}
+
 struct OutlineButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .foregroundColor(configuration.isPressed ? .white : .gray.opacity(0.6))
+            .foregroundColor(configuration.isPressed ? .primary : .secondary)
             .padding(.horizontal, 8)
             .padding(.vertical, 2)
-            .background(
-                RoundedRectangle(
-                    cornerRadius: 8,
-                    style: .continuous
-                ).stroke(Color.gray.opacity(0.3))
-            )
+            .background(OutlineButtonBackground(isPressed: configuration.isPressed))
     }
 }
 
@@ -27,12 +40,6 @@ struct AthanBottom: View {
     
     var body: some View {
         HStack {
-            Button {
-                NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
-            } label: {
-                Text("About")
-            }.buttonStyle(OutlineButton())
-            
             Button {
                 NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
             } label: {

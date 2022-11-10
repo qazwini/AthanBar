@@ -25,6 +25,7 @@ struct AthanBarApp: App {
         
         Settings {
             SettingsView()
+                .environmentObject(viewModel)
         }
     }
 }

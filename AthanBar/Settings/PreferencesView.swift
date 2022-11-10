@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PreferencesView: View {
+    @EnvironmentObject var viewModel: AthanViewModel
+    
     var body: some View {
         Text("pref")
     }

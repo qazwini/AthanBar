@@ -23,6 +23,7 @@ struct AthanHeader: View {
             } label: {
                 Image(systemName: "chevron.backward.circle")
                     .font(.title3)
+                    .foregroundColor(.secondary)
             }
             .buttonStyle(.borderless)
             
@@ -31,6 +32,7 @@ struct AthanHeader: View {
             } label: {
                 Image(systemName: "chevron.forward.circle")
                     .font(.title3)
+                    .foregroundColor(.secondary)
             }.buttonStyle(.borderless)
         }
     }
