@@ -10,8 +10,8 @@ import Foundation
 class Hijri {
     static let calendar = Calendar(identifier: .islamicCivil)
     
-    enum Months: Int, CaseIterable {
-        case muharram = 1, safar, rabiOne, rabiTwo, jumadiOne, jumadiTwo, rajab, shaban, ramadan, shawwal, thulqida, thulhijjah
+    enum Months: CaseIterable {
+        case muharram, safar, rabiOne, rabiTwo, jumadiOne, jumadiTwo, rajab, shaban, ramadan, shawwal, thulqida, thulhijjah
         
         var name: String {
             switch self {
@@ -31,7 +31,11 @@ class Hijri {
         }
     }
     
-    static func dateString(forDate: Date) -> String {
-        
+    static func dateString(forDate date: Date) -> String {
+        let df = DateFormatter()
+        df.calendar = calendar
+        df.monthSymbols = Months.allCases.map(\.name)
+        df.dateFormat = "MMMM d, yyyy"
+        return df.string(from: date)
     }
 }
