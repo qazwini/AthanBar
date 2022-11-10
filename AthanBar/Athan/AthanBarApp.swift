@@ -18,8 +18,8 @@ struct AthanBarApp: App {
                 .environmentObject(viewModel)
         } label: {
             HStack(alignment: .center, spacing: 5) {
-                Image(systemName: PrayerEntry.snapshotNext.prayer.icon)
-                Text(PrayerEntry.snapshotNext.timeString)
+                Image(systemName: viewModel.upcomingEntry.prayer.icon)
+                Text(viewModel.upcomingEntry.timeString)
             }
         }.menuBarExtraStyle(.window)
         

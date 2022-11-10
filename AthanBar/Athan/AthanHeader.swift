@@ -12,9 +12,13 @@ struct AthanHeader: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            Text(viewModel.hijriDate)
-                .font(.title2)
-                .fontWeight(.semibold)
+            Button {
+                viewModel.adjustment = 0
+            } label: {
+                Text(viewModel.hijriDate)
+                    .font(.title2)
+                    .fontWeight(.semibold)
+            }.buttonStyle(.plain)
             
             Spacer()
             
@@ -24,8 +28,7 @@ struct AthanHeader: View {
                 Image(systemName: "chevron.backward.circle")
                     .font(.title3)
                     .foregroundColor(.secondary)
-            }
-            .buttonStyle(.borderless)
+            }.buttonStyle(.borderless)
             
             Button {
                 viewModel.adjustment += 1

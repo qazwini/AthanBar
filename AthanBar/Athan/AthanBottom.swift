@@ -36,6 +36,7 @@ struct OutlineButton: ButtonStyle {
 }
 
 struct AthanBottom: View {
+    @EnvironmentObject var viewModel: AthanViewModel
     @Environment(\.openWindow) var openWindow
     
     var body: some View {
@@ -44,6 +45,12 @@ struct AthanBottom: View {
                 NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
             } label: {
                 Text("Settings")
+            }.buttonStyle(OutlineButton())
+            
+            Button {
+                viewModel.updateLocation()
+            } label: {
+                Image(systemName: "location")
             }.buttonStyle(OutlineButton())
             
             Spacer()

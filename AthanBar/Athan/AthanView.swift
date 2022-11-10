@@ -9,11 +9,10 @@ import SwiftUI
 
 struct AthanView: View {
     @EnvironmentObject var viewModel: AthanViewModel
-    @State var authorized: Bool = true
     
     var body: some View {
         VStack {
-            if authorized {
+            if viewModel.authorized {
                 VStack {
                     AthanHeader()
                         .padding(.bottom, 15)
@@ -27,22 +26,15 @@ struct AthanView: View {
                     
                 }.padding(15)
             } else {
-                Text("Location not set")
+                Text("Location not set").padding(15)
             }
             
             Divider()
             
             AthanBottom()
+        }.onAppear {
+            viewModel.updateLocation()
         }
-//        .onAppear {
-//            do {
-//                try viewModel.locationProvider.start()
-//                authorized = viewModel.locationProvider.authorizationStatus == .authorized
-//            } catch {
-//                print("No location access.")
-//                viewModel.locationProvider.requestAuthorization()
-//            }
-//        }
     }
 }
 
