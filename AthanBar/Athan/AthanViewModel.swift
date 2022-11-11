@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import Athan
 
 class AthanViewModel: ObservableObject {
     @ObservedObject var locationProvider = LocationProvider()
     @Published var authorized = false
     @Published var adjustedDate: Date = Date()
-    @Published var hijriDate: String = ""
-    @Published var entries: [PrayerEntry] = []
-    @Published var upcomingEntry: PrayerEntry = PrayerEntry(prayer: .duhr, date: Date())
+    @Published var hijriDate: String = "Updating..."
+    @Published var entries: [PrayerTime?]? = nil
+    @Published var upcomingEntry: PrayerTime? = nil
     
     var adjustment: Int = 0 {
         didSet { update() }
@@ -23,17 +24,13 @@ class AthanViewModel: ObservableObject {
         do {
             try locationProvider.start()
             authorized = locationProvider.authorizationStatus == .authorized
-            if let lat = locationProvider.location?.coordinate.latitude,
-               let lng = locationProvider.location?.coordinate.longitude {
-                prayerTimes.coordinate = Coordinate(lat: lat, lng: lng)
-            }
         } catch {
             print("No location access.")
             locationProvider.requestAuthorization()
         }
     }
     
-    private var prayerTimes: PrayerTimes = PrayerTimes(coord: Coordinate(lat: 0, lng: 0))
+    private var prayerTimes: PrayerTimes?
     private var date: Date = Date()
     private var timer: Timer?
     
@@ -55,8 +52,17 @@ class AthanViewModel: ObservableObject {
         hijriDate = Hijri.dateString(forDate: adjustedDate)
         
         // Prayer times
-        upcomingEntry = prayerTimes.getNextPrayerEntry(forDate: adjustedDate)
-        entries = prayerTimes.getPrayerEntries(forDate: adjustedDate)
-        print(entries)
+        if let lat = locationProvider.location?.coordinate.latitude,
+           let lng = locationProvider.location?.coordinate.longitude {
+            prayerTimes = PrayerTimes(
+                prayers: Prayer.allDefaultCases,
+                coordinates: Coordinates(latitude: lat, longitude: lng),
+                date: adjustedDate,
+                calculationParameters: CalculationMethod.jafari.params
+            )
+            
+            upcomingEntry = prayerTimes?.nextPrayer()
+            entries = prayerTimes?.prayerTimes()
+        }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct AthanBarApp: App {
     @StateObject private var viewModel = AthanViewModel()
+    @AppStorage("styleSelection") private var styleSelection = 0
     
     var body: some Scene {
         MenuBarExtra {
@@ -17,9 +18,18 @@ struct AthanBarApp: App {
                 .frame(width: 240)
                 .environmentObject(viewModel)
         } label: {
-            HStack(alignment: .center, spacing: 5) {
-                Image(systemName: viewModel.upcomingEntry.prayer.icon)
-                Text(viewModel.upcomingEntry.timeString)
+            HStack(alignment: .center) {
+                if let entry = viewModel.upcomingEntry {
+                    if styleSelection == 0 {
+                        Image(systemName: entry.prayer.icon)
+                        Text(entry.timeString)
+                    } else {
+                        Text(entry.prayer.name + " " + entry.timeString)
+                    }
+                } else {
+                    Image(systemName: "xmark.octagon")
+                    Text("--:--")
+                }
             }
         }.menuBarExtraStyle(.window)
         

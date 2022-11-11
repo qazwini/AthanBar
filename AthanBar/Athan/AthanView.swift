@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Athan
 
 struct AthanView: View {
     @EnvironmentObject var viewModel: AthanViewModel
@@ -18,9 +19,9 @@ struct AthanView: View {
                         .padding(.bottom, 15)
                     
                     VStack {
-                        ForEach(viewModel.entries, id: \.id) { entry in
+                        ForEach(viewModel.entries ?? [], id: \.?.prayer.rawValue) { entry in
                             AthanCell(entry: entry)
-                                .padding(.bottom, entry.prayer == .midnight ? 0 : 8)
+                                .padding(.bottom, entry?.prayer == .midnight ? 0 : 8)
                         }
                     }
                     

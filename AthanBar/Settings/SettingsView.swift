@@ -17,6 +17,11 @@ struct SettingsView: View {
                     Label("Preferences", systemImage: "gearshape")
                 }
             
+            PrayerTimesView()
+                .tabItem {
+                    Label("Prayer Times", systemImage: "clock")
+                }
+
             AboutView()
                 .tabItem {
                     Label("About", systemImage: "person")
