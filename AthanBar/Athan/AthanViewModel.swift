@@ -23,7 +23,6 @@ class AthanViewModel: ObservableObject {
     func updateLocation() {
         do {
             try locationProvider.start()
-            authorized = locationProvider.authorizationStatus == .authorized
         } catch {
             print("No location access.")
             locationProvider.requestAuthorization()
@@ -46,6 +45,8 @@ class AthanViewModel: ObservableObject {
     }
     
     private func update() {
+        authorized = locationProvider.authorizationStatus == .authorized
+        
         // Date
         date = Date()
         adjustedDate = date.adjusting(days: adjustment)

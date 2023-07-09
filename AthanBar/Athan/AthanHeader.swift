@@ -28,7 +28,7 @@ struct AthanHeader: View {
                 Image(systemName: "chevron.backward.circle")
                     .font(.title3)
                     .foregroundColor(.secondary)
-            }.buttonStyle(.borderless)
+            }.buttonStyle(.plain)
             
             Button {
                 viewModel.adjustment += 1
@@ -36,7 +36,7 @@ struct AthanHeader: View {
                 Image(systemName: "chevron.forward.circle")
                     .font(.title3)
                     .foregroundColor(.secondary)
-            }.buttonStyle(.borderless)
+            }.buttonStyle(.plain)
         }
     }
 }

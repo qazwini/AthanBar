@@ -10,31 +10,20 @@ import Athan
 
 struct AthanView: View {
     @EnvironmentObject var viewModel: AthanViewModel
+    @State private var selectedDate = Date()
     
     var body: some View {
         VStack {
-            if viewModel.authorized {
-                VStack {
-                    AthanHeader()
-                        .padding(.bottom, 15)
-                    
-                    VStack {
-                        ForEach(viewModel.entries ?? [], id: \.?.prayer.rawValue) { entry in
-                            AthanCell(entry: entry)
-                                .padding(.bottom, entry?.prayer == .midnight ? 0 : 8)
-                        }
-                    }
-                    
-                }.padding(15)
-            } else {
-                Text("Location not set").padding(15)
-            }
+            VStack {
+                AthanHeader()
+                    .padding(.bottom, 15)
+                
+                AthanListView()
+            }.padding(15)
             
             Divider()
             
             AthanBottom()
-        }.onAppear {
-            viewModel.updateLocation()
         }
     }
 }

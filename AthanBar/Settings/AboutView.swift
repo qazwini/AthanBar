@@ -10,8 +10,10 @@ import SwiftUI
 struct AboutView: View {
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
-            Image(systemName: "circle")
-                .font(.title)
+            Image("appIcon")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 150, height: 150)
             
             VStack(alignment: .leading, spacing: 5) {
                 Text("AthanBar")
@@ -20,7 +22,7 @@ struct AboutView: View {
                 Text("Version \(Bundle.main.appVersion)")
                 
                 Button {
-                    if let url = URL(string: websiteLink) {
+                    if let url = URL(string: AppData.websiteLink) {
                         NSWorkspace.shared.open(url)
                     }
                 } label: {

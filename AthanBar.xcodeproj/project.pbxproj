@@ -19,15 +19,22 @@
 		FA50C2FA291CC59700057079 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C2F9291CC59700057079 /* PreferencesView.swift */; };
 		FA50C2FC291CC59E00057079 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C2FB291CC59E00057079 /* AboutView.swift */; };
 		FA50C2FE291CC94900057079 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C2FD291CC94900057079 /* Bundle.swift */; };
-		FA50C301291CCA1E00057079 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C300291CCA1E00057079 /* General.swift */; };
+		FA50C301291CCA1E00057079 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C300291CCA1E00057079 /* AppData.swift */; };
 		FA50C305291CCB0100057079 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA50C304291CCB0000057079 /* Preview Assets.xcassets */; };
 		FA50C312291E1E2A00057079 /* Athan in Frameworks */ = {isa = PBXBuildFile; productRef = FA50C311291E1E2A00057079 /* Athan */; };
 		FA50C315291E402100057079 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = FA50C314291E402100057079 /* Preferences */; };
 		FA50C317291E403000057079 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C316291E403000057079 /* Settings.swift */; };
 		FA50C319291E416A00057079 /* PrayerTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C318291E416A00057079 /* PrayerTimesView.swift */; };
+		FA50C31B291E459300057079 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C31A291E459300057079 /* Saved.swift */; };
+		FA50C31D291E464900057079 /* SavedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA50C31C291E464900057079 /* SavedModel.swift */; };
+		FA50C320291F11EB00057079 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = FA50C31F291F11EB00057079 /* LaunchAtLogin */; };
 		FA7101D7291C1E0F00E96377 /* AthanBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7101D6291C1E0F00E96377 /* AthanBarApp.swift */; };
 		FA7101D9291C1E0F00E96377 /* AthanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7101D8291C1E0F00E96377 /* AthanView.swift */; };
 		FA7101DB291C1E1100E96377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7101DA291C1E1100E96377 /* Assets.xcassets */; };
+		FAE4242A2A5AD75E002EC81E /* EnableLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE424292A5AD75E002EC81E /* EnableLocationView.swift */; };
+		FAE4242C2A5AD7B9002EC81E /* AthanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4242B2A5AD7B9002EC81E /* AthanListView.swift */; };
+		FAE4242E2A5ADCF6002EC81E /* AthanMenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4242D2A5ADCF6002EC81E /* AthanMenuBarView.swift */; };
+		FAE424302A5ADD3F002EC81E /* EnableLocationMenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4242F2A5ADD3F002EC81E /* EnableLocationMenuBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,15 +52,21 @@
 		FA50C2F9291CC59700057079 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		FA50C2FB291CC59E00057079 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		FA50C2FD291CC94900057079 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
-		FA50C300291CCA1E00057079 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
+		FA50C300291CCA1E00057079 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		FA50C304291CCB0000057079 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA50C316291E403000057079 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		FA50C318291E416A00057079 /* PrayerTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesView.swift; sourceTree = "<group>"; };
+		FA50C31A291E459300057079 /* Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
+		FA50C31C291E464900057079 /* SavedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedModel.swift; sourceTree = "<group>"; };
 		FA7101D3291C1E0F00E96377 /* AthanBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AthanBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7101D6291C1E0F00E96377 /* AthanBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanBarApp.swift; sourceTree = "<group>"; };
 		FA7101D8291C1E0F00E96377 /* AthanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanView.swift; sourceTree = "<group>"; };
 		FA7101DA291C1E1100E96377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA7101DF291C1E1100E96377 /* AthanBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AthanBar.entitlements; sourceTree = "<group>"; };
+		FAE424292A5AD75E002EC81E /* EnableLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableLocationView.swift; sourceTree = "<group>"; };
+		FAE4242B2A5AD7B9002EC81E /* AthanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanListView.swift; sourceTree = "<group>"; };
+		FAE4242D2A5ADCF6002EC81E /* AthanMenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthanMenuBarView.swift; sourceTree = "<group>"; };
+		FAE4242F2A5ADD3F002EC81E /* EnableLocationMenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableLocationMenuBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA50C320291F11EB00057079 /* LaunchAtLogin in Frameworks */,
 				FA50C312291E1E2A00057079 /* Athan in Frameworks */,
 				FA50C315291E402100057079 /* Preferences in Frameworks */,
 			);
@@ -84,20 +98,16 @@
 			children = (
 				FA50C2DA291C425500057079 /* AthanViewModel.swift */,
 				FA7101D6291C1E0F00E96377 /* AthanBarApp.swift */,
+				FAE4242D2A5ADCF6002EC81E /* AthanMenuBarView.swift */,
+				FAE4242F2A5ADD3F002EC81E /* EnableLocationMenuBarView.swift */,
 				FA7101D8291C1E0F00E96377 /* AthanView.swift */,
+				FAE4242B2A5AD7B9002EC81E /* AthanListView.swift */,
+				FAE424292A5AD75E002EC81E /* EnableLocationView.swift */,
 				FA50C2F2291CB0E100057079 /* AthanHeader.swift */,
 				FA50C2EE291CAE2500057079 /* AthanCell.swift */,
 				FA50C2F0291CB0A200057079 /* AthanBottom.swift */,
 			);
 			path = Athan;
-			sourceTree = "<group>";
-		};
-		FA50C2E7291CA94800057079 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				FA50C2E8291CA96600057079 /* LocationProvider.swift */,
-			);
-			path = Location;
 			sourceTree = "<group>";
 		};
 		FA50C2EA291CA9AC00057079 /* Frameworks */ = {
@@ -123,6 +133,8 @@
 		FA50C2FF291CC94D00057079 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FA50C31A291E459300057079 /* Saved.swift */,
+				FA50C2E8291CA96600057079 /* LocationProvider.swift */,
 				FA50C2FD291CC94900057079 /* Bundle.swift */,
 			);
 			path = Utilities;
@@ -157,11 +169,11 @@
 			isa = PBXGroup;
 			children = (
 				FA50C2ED291CAB4C00057079 /* Info.plist */,
-				FA50C300291CCA1E00057079 /* General.swift */,
+				FA50C300291CCA1E00057079 /* AppData.swift */,
+				FA50C31C291E464900057079 /* SavedModel.swift */,
 				FA50C2DF291C477100057079 /* Athan */,
 				FA50C2F8291CB3F500057079 /* Settings */,
 				FA50C2DE291C476200057079 /* Calculation */,
-				FA50C2E7291CA94800057079 /* Location */,
 				FA50C2FF291CC94D00057079 /* Utilities */,
 				FA7101DA291C1E1100E96377 /* Assets.xcassets */,
 				FA7101DF291C1E1100E96377 /* AthanBar.entitlements */,
@@ -189,6 +201,7 @@
 			packageProductDependencies = (
 				FA50C311291E1E2A00057079 /* Athan */,
 				FA50C314291E402100057079 /* Preferences */,
+				FA50C31F291F11EB00057079 /* LaunchAtLogin */,
 			);
 			productName = AthanBar;
 			productReference = FA7101D3291C1E0F00E96377 /* AthanBar.app */;
@@ -221,6 +234,7 @@
 			packageReferences = (
 				FA50C310291E1E2A00057079 /* XCRemoteSwiftPackageReference "athan" */,
 				FA50C313291E402100057079 /* XCRemoteSwiftPackageReference "Preferences" */,
+				FA50C31E291F11EB00057079 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 			);
 			productRefGroup = FA7101D4291C1E0F00E96377 /* Products */;
 			projectDirPath = "";
@@ -250,17 +264,23 @@
 			files = (
 				FA50C2E3291C4F3800057079 /* Prayer.swift in Sources */,
 				FA50C2DD291C456500057079 /* Hijri.swift in Sources */,
+				FAE4242E2A5ADCF6002EC81E /* AthanMenuBarView.swift in Sources */,
 				FA50C319291E416A00057079 /* PrayerTimesView.swift in Sources */,
+				FAE424302A5ADD3F002EC81E /* EnableLocationMenuBarView.swift in Sources */,
+				FA50C31D291E464900057079 /* SavedModel.swift in Sources */,
+				FA50C31B291E459300057079 /* Saved.swift in Sources */,
 				FA50C2E1291C478D00057079 /* Dates.swift in Sources */,
 				FA50C2FA291CC59700057079 /* PreferencesView.swift in Sources */,
 				FA7101D9291C1E0F00E96377 /* AthanView.swift in Sources */,
 				FA50C2EF291CAE2500057079 /* AthanCell.swift in Sources */,
-				FA50C301291CCA1E00057079 /* General.swift in Sources */,
+				FA50C301291CCA1E00057079 /* AppData.swift in Sources */,
+				FAE4242A2A5AD75E002EC81E /* EnableLocationView.swift in Sources */,
 				FA50C2E9291CA96600057079 /* LocationProvider.swift in Sources */,
 				FA7101D7291C1E0F00E96377 /* AthanBarApp.swift in Sources */,
 				FA50C2FC291CC59E00057079 /* AboutView.swift in Sources */,
 				FA50C317291E403000057079 /* Settings.swift in Sources */,
 				FA50C2F3291CB0E100057079 /* AthanHeader.swift in Sources */,
+				FAE4242C2A5AD7B9002EC81E /* AthanListView.swift in Sources */,
 				FA50C2DB291C425500057079 /* AthanViewModel.swift in Sources */,
 				FA50C2F7291CB3EE00057079 /* SettingsView.swift in Sources */,
 				FA50C2FE291CC94900057079 /* Bundle.swift in Sources */,
@@ -496,6 +516,14 @@
 				kind = branch;
 			};
 		};
+		FA50C31E291F11EB00057079 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -508,6 +536,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA50C313291E402100057079 /* XCRemoteSwiftPackageReference "Preferences" */;
 			productName = Preferences;
+		};
+		FA50C31F291F11EB00057079 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA50C31E291F11EB00057079 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,7 +6,16 @@
       "location" : "https://github.com/qazwini/athan",
       "state" : {
         "branch" : "main",
-        "revision" : "e60f2e92269c56202b47f740e68c27b716209c5d"
+        "revision" : "d46dc951e3673ae2032759047998b2d582eec91a"
+      }
+    },
+    {
+      "identity" : "launchatlogin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/LaunchAtLogin",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d473e169537169cc0442d6d88a0f9a9daf9d4f6f"
       }
     },
     {
